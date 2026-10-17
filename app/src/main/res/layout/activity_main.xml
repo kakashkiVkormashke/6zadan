@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="#1A237E">
+    <com.example.arkanoid.GameView android:id="@+id/gameView" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:contentDescription="@string/game_description"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:padding="12dp" android:orientation="horizontal">
+        <Button android:id="@+id/btnNewGame" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/new_game"/>
+        <Button android:id="@+id/btnPause" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:text="@string/pause"/>
+    </LinearLayout>
+</LinearLayout>
