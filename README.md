@@ -21,7 +21,7 @@
 
 ## Проверено
 
-`testDebugUnitTest`, `lintDebug` и `assembleDebug` завершились успешно: 7 тестов, 0 ошибок и пропусков. Lint: 0 ошибок, 6 предупреждений (в том числе портретная ориентация по методичке). Подпись APK проверена `apksigner verify`. Игра на физическом устройстве/эмуляторе в этой среде не запускалась.
+`testDebugUnitTest`, `lintDebug` и `assembleDebug` на Java 25 завершились успешно: 7 тестов, 0 ошибок и пропусков. Lint: 0 ошибок, 8 предупреждений (в том числе портретная ориентация по методичке). Подпись APK проверена `apksigner verify`. Игра на физическом устройстве/эмуляторе в этой среде не запускалась.
 
 ## Запуск
 
@@ -29,7 +29,9 @@
 2. Установите Android SDK Platform 35 и Build Tools 35.0.0 через SDK Manager.
 3. Выберите устройство или эмулятор Android 7.0 (API 24) и новее, нажмите Run.
 
-Для сборки из терминала нужны JDK 17 или 21, Android SDK и `ANDROID_HOME` либо `sdk.dir` в локальном `local.properties`:
+Gradle 9.1.0 поддерживает запуск на Java 17–25, включая встроенную Java 25 из Android Studio. Проект не требует скачивания отдельной JetBrains JDK 21 и не задаёт путь к JDK или Java toolchain. Оставьте встроенную JDK Android Studio в качестве Gradle JVM. Если IDE уже сохранила неудачную попытку скачать JDK 21, выберите существующую Embedded JDK (`jbr`) в Settings → Build, Execution, Deployment → Build Tools → Gradle → Gradle JDK.
+
+Для сборки из терминала нужны JDK 17–25, Android SDK и `ANDROID_HOME` либо `sdk.dir` в локальном `local.properties`:
 
 ```sh
 ./gradlew testDebugUnitTest lintDebug assembleDebug
